@@ -1,0 +1,78 @@
+body {
+  background-color: #ecf0f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 900px;
+  background-color: white;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 5px 10px 20px grey;
+  padding: 20px 10px;
+}
+
+.card {
+  width: 400px;
+  margin: 0 auto;
+  padding: 15px 10px;
+}
+
+.card .content-card p {
+  text-align: justify;
+}
+
+.card .content-card button {
+  padding: 5px 22px;
+  border: 1px solid black;
+  border-radius: 15px;
+  color: white;
+  background-color: #17202a;
+}
+
+.content-card .donwload,
+.sosmed {
+  margin: 25px 0;
+}
+
+.content-card .donwload a i {
+  color: black;
+  margin-left: 8px;
+}
+.content-card .sosmed {
+  text-align: center;
+}
+
+.content-card .sosmed a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  padding: 2px 2px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.content-card .sosmed a i {
+  font-size: 16px;
+}
+
+.card .profil {
+  width: 250px;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 3px 3px 20px grey;
+}
+
+.card .profil img {
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  margin: 0px;
+}
+
+.card .profil .me {
+  text-align: center;
+  padding: 5px 0px;
+}
+.card .profil .me p {
+  margin: 0px;
+}
