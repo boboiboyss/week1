@@ -29,6 +29,7 @@ nav {
 .nav-right a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 .nav-right a {
@@ -48,54 +49,57 @@ nav {
 }
 
 .card {
-  width: 400px;
-  margin: 0 auto;
-  padding: 15px 10px;
+  /* margin: 0 auto; */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card .content-card {
+  width: 65%;
 }
 
 .card .content-card p {
   text-align: justify;
 }
 
-.card .content-card button {
+.content-card .donwload,
+.sosmed {
+  margin: 50px 0;
+}
+
+.content-card .donwload span {
+  margin: 0px 15px;
+}
+
+.content-card .donwload .button {
   padding: 5px 22px;
   border: 1px solid black;
   border-radius: 15px;
   color: white;
   background-color: #17202a;
-}
-
-.content-card .donwload,
-.sosmed {
-  margin: 25px 0;
+  text-decoration: none;
 }
 
 .content-card .donwload a i {
   color: black;
-  margin-left: 8px;
-}
-.content-card .sosmed {
-  text-align: center;
 }
 
 .content-card .sosmed a {
   text-decoration: none;
   color: white;
   margin: 0 10px;
-  padding: 2px 2px;
+  padding: 4px 4px;
   background-color: black;
   border-radius: 50%;
 }
 
-.content-card .sosmed a i {
-  font-size: 16px;
-}
-
 .card .profil {
-  width: 250px;
-  margin: 0 auto;
+  width: 33%;
+  align-items: center;
   border-radius: 6px;
   box-shadow: 3px 3px 20px grey;
+  margin-left: 50px;
 }
 
 .card .profil img {
@@ -106,8 +110,7 @@ nav {
 
 .card .profil .me {
   text-align: center;
-  padding: 5px 0px;
+  padding: 2px 0px;
 }
-.card .profil .me p {
-  margin: 0px;
-}
+
+//styling contact-form

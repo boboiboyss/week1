@@ -3,9 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <link rel="stylesheet" href="./assets/css/style-contact.css" />
+    <title>Input Data</title>
   </head>
   <body>
-    <h1>This is page contact form</h1>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="./index.html">
+          <img src="./assets/img/logo.png" alt="logo" />
+        </a>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">My Project</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="./contact-form.html">Contact Me</a>
+      </div>
+    </nav>
+    <h1 style="text-align: center; margin: 50px 0">GET IN TOUCH</h1>
+    <form>
+      <div>
+        <label for="lname">Nama</label>
+        <input type="text" id="lname" />
+      </div>
+      <div>
+        <label for="lemail">Email</label>
+        <input type="text" id="lemail" />
+      </div>
+      <div>
+        <label for="lnohp">No Handphone</label>
+        <input type="text" id="lnohp" />
+      </div>
+      <div>
+        <label for="lpekerjaan">Subject</label>
+        <select name="" id="lpekerjaan">
+          <option value="">Frontend</option>
+          <option value="">Backend</option>
+          <option value="">Fullstack</option>
+        </select>
+      </div>
+      <div>
+        <label for="lmessage">Message</label>
+        <textarea id="lmessage"></textarea>
+      </div>
+      <div>
+        <button type="submit">submit</button>
+      </div>
+    </form>
   </body>
 </html>
