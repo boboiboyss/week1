@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/project.css" />
+    <script src="./assets/js/project.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="./index.html">
+          <img src="./assets/img/logo.png" alt="logo" />
+        </a>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">My Project</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="./contact-form.html">Contact Me</a>
+      </div>
+    </nav>
+    <div class="container">
+      <p>ADD MY PROJECT</p>
+      <form>
+        <div class="project-name">
+          <label for="lproject-name">Project Name</label>
+          <input type="text" id="lprojectName" />
+        </div>
+        <div class="date">
+          <div>
+            <label for="lstart-date">Start Date</label>
+            <input type="date" id="lstart-date" />
+          </div>
+          <div>
+            <label for="lend-date" style="margin-left: 18px">End Date</label>
+            <input type="date" id="lend-date" />
+          </div>
+        </div>
+        <div class="description">
+          <label for="ldescription">Description</label>
+          <textarea id="ldescription"></textarea>
+        </div>
+        <div class="technologies">
+          <label>Technologies</label>
+          <div>
+            <input type="checkbox" value="Node Js" name="tech" />
+            <span>Node Js</span>
+            <input type="checkbox" value="React Js" name="tech" />
+            <span>React Js</span>
+          </div>
+          <div>
+            <input type="checkbox" value="Next Js" name="tech" />
+            <span>Next Js</span>
+            <input type="checkbox" value="TypeScript" name="tech" />
+            <span>TypeScript</span>
+          </div>
+        </div>
+        <div class="upload-image">
+          <label for="lupload">Upload Image</label>
+          <input type="file" id="lupload" />
+        </div>
+        <button type="submit" onclick="handleProject(event)">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

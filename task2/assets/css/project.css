@@ -1,0 +1,104 @@
+body {
+  background-color: #dce0e4;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 5px 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.nav-left ul {
+  list-style-type: none;
+  margin: 0px;
+}
+
+.nav-left ul li {
+  display: inline;
+  margin: 0px 20px;
+}
+
+.nav-left ul li a,
+.nav-right a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav-right a {
+  padding: 6px 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: #17202a;
+}
+
+.container {
+  background-color: #dce0e4;
+}
+
+.container p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 40px 0;
+}
+
+.container form {
+  width: 350px;
+  margin: 30px auto;
+}
+
+.container form div {
+  margin-bottom: 20px;
+}
+
+.container form .date div {
+  float: left;
+  width: 50%;
+}
+
+#lstart-date,
+#lend-date {
+  width: 90%;
+}
+
+#lend-date {
+  margin-left: 18px;
+}
+
+.container form div label {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.project-name input,
+.date input,
+.description textarea {
+  width: 100%;
+  padding: 8px 8px;
+  border: 1px solid #ecf0f1;
+  border-radius: 5px;
+  box-shadow: 5px 20px 30px #ecf0f1;
+}
+
+.technologies div {
+  margin-right: 40px;
+}
+
+.description textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  float: right;
+}
