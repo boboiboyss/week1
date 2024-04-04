@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style-contact.css" />
-    <title>Input Data</title>
+    <script src="./assets/js/sendEmail.js"></script>
+    <title>Contact Me</title>
   </head>
   <body>
     <nav class="navbar">
@@ -32,23 +33,24 @@
         <input type="text" id="lemail" />
       </div>
       <div>
-        <label for="lnohp">No Handphone</label>
-        <input type="text" id="lnohp" />
+        <label for="lphone">Phone Number</label>
+        <input type="text" id="lphone" />
       </div>
       <div>
-        <label for="lpekerjaan">Subject</label>
-        <select name="" id="lpekerjaan">
-          <option value="">Frontend</option>
-          <option value="">Backend</option>
-          <option value="">Fullstack</option>
+        <label for="lsubject">Subject</label>
+        <select name="lsubject" id="lsubject">
+          <option value=""></option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
         </select>
       </div>
       <div>
-        <label for="lmessage">Message</label>
+        <label for="lmessage">Your Message</label>
         <textarea id="lmessage"></textarea>
       </div>
       <div>
-        <button type="submit">submit</button>
+        <button type="submit" onclick="handleSubmit(event)">submit</button>
       </div>
     </form>
   </body>
