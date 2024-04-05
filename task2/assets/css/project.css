@@ -1,5 +1,5 @@
-body {
-  background-color: #dce0e4;
+* {
+  /* background-color: #dce0e4; */
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -43,13 +43,14 @@ nav {
 
 .container {
   background-color: #dce0e4;
+  padding: 40px 0;
 }
 
 .container p {
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 25px;
-  margin: 40px 0;
+  /* margin-top: 20px; */
 }
 
 .container form {
@@ -101,4 +102,87 @@ nav {
 
 form button {
   float: right;
+  margin: 10px 0;
+  padding: 5px 30px;
+  background-color: #17202a;
+  color: white;
+  border: 1px solid #17202a;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.list-project {
+  background-color: white;
+  margin: 10px 30px;
+}
+
+.list-project .title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+.card-container {
+  width: 800px;
+  margin: 0 auto;
+  /* background-color: #f7f7f7; */
+  padding: 5px;
+}
+
+#card-project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#card-project .card-content {
+  width: 220px;
+  padding: 3px;
+  border: 1px solid #dce0e4;
+  box-shadow: 2px 10px 15px #dce0e4;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin: 5px 5px;
+}
+
+.card-content img {
+  width: 100%;
+  border: 1px solid #dce0e4;
+  box-shadow: 2px 10px 15px #dce0e4;
+  border-radius: 5px;
+}
+
+.card-content .title-content {
+  font-size: 16px;
+  font-weight: 670;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.card-content span {
+  font-size: 14px;
+}
+
+.card-content .description {
+  text-align: justify;
+}
+
+.card-content .description-content {
+  margin: 20px 0;
+}
+
+.card-content i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.card-content .action button {
+  margin-top: 20px;
+  padding: 5px 5px;
+  background-color: #17202a;
+  color: white;
+  border: 1px solid #17202a;
+  border-radius: 8px;
+  width: 48%;
 }
