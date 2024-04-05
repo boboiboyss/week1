@@ -11,31 +11,67 @@ function handleProject(event) {
     let image = document.getElementById('lupload').files[0];
     let urlImage = URL.createObjectURL(image)
 
-    
-    let listTech = []
-    for (let i = 0; i < tech.length; i++) {
+    if(projectName === "" || startDate === "" || endDate === "" || description === "" || urlImage === "" || tech.checked == false) {
+        return alert("Please complete the empty fields");
+    } else if (startDate > endDate) {
+        return alert('The end date cannot be less than the start date');
+    } else {
+        let listTech = []
+        for (let i = 0; i < tech.length; i++) {
         if (tech[i].checked === true) {
             listTech.push (tech[i].value);
         }
         // else if (tech[i].checked === false) {
         //     return alert('please check one of the techs')
         // }
-    }
+        }
 
-    if(projectName === "" || startDate === "" || endDate === "" || description === "" || urlImage === "") {
-        return alert("Please complete the empty fields");
-    } 
-    
-    addProject.push({
-        projectName, startDate, endDate, description, urlImage, listTech
-    })
+
+        let startDatePart = startDate.split('/');
+        let endDatePart = endDate.split('/');
+
+        let formatStartDate = `${startDatePart[2]} - ${startDatePart[1]} - ${startDatePart[0]}`;
+        let formatEndDate = `${endDatePart[2]} - ${endDatePart[1]} - ${endDatePart[0]}`
+
+        let newStartDate = new Date(formatStartDate);
+        let newEndDate = new Date(formatEndDate);
+
+        let timeDifference = newEndDate - newStartDate
+        let getDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        let getMonths = Math.floor(getDays / 30.44);
+        let getYears =  Math.floor(getMonths / 12)
+        
+        let duration;
+        if(getYears > 0) {
+            duration = `${getYears} Tahun`
+        } else if (getMonths > 0) {
+            duration = `${getMonths} Bulan`
+        } else {
+            duration = `${getDays} Hari`
+        }
+
+        // addProject.push({
+        // projectName, startDate, endDate, description, urlImage, listTech
+        // })
+
+        addProject.push({
+            title : projectName,
+            startDate,
+            endDate,
+            description,
+            image : urlImage,
+            duration
+        })
+
+        console.log(addProject)
+    }
 
    const temp = document.getElementById('card-project');
    addProject.map(item => {
         temp.innerHTML += `<div class='card-content'>
-                <img src='${item.urlImage}' alt='img' style='height: 90px' />
-                <p class='title-content'>${item.projectName}</p>  
-                <span>durasi : ${item.startDate} - ${item.endDate}</span>
+                <img src='${item.image}' alt='img'/>
+                <p class='title-content'>${item.title}</p>  
+                <small>durasi : ${item.duration}</small>
                 <p class='description-content'>${item.description.substr(0, 80)}</p>
                 <i class="fa-brands fa-google-play"></i>
                 <i class="fa-brands fa-android"></i>
@@ -45,8 +81,8 @@ function handleProject(event) {
                 <button style='margin-left : 3px'>delete</button>
                 </div>
     </div>`
-
    })
+
 //    temp.innerHTML = `<div class='card-content'>
 //                 <img src='${image}' alt='img' />
 //                 <p class='title-content'>${projectName}</p>  
@@ -59,8 +95,6 @@ function handleProject(event) {
 //                 <button>edit</button><button>delete</button>
 //                 </div>
 //     </div>`;
-
-console.log(urlImage)
 }
 
 

@@ -31,7 +31,7 @@
       <form>
         <div class="project-name">
           <label for="lproject-name">Project Name</label>
-          <input type="text" id="lprojectName" />
+          <input type="text" id="lprojectName" maxlength="40" />
         </div>
         <div class="date">
           <div>
@@ -64,7 +64,7 @@
         </div>
         <div class="upload-image">
           <label for="lupload">Upload Image</label>
-          <input type="file" id="lupload" />
+          <input type="file" id="lupload" accept="image/png, image/jpeg" />
         </div>
         <button type="submit" onclick="handleProject(event)">submit</button>
       </form>
