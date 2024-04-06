@@ -40,28 +40,28 @@ nav {
   background-color: #17202a;
 }
 
-.container {
+.form-container {
   background-color: #dce0e4;
   padding: 40px 0;
 }
 
-.container p {
+.form-container p {
   text-align: center;
   font-weight: 800;
   font-size: 25px;
   /* margin-top: 20px; */
 }
 
-.container form {
+.form-container form {
   width: 350px;
   margin: 25px auto 50px auto;
 }
 
-.container form div {
+.form-container form div {
   margin-bottom: 20px;
 }
 
-.container form .date div {
+.form-container form .date div {
   float: left;
   width: 50%;
 }
@@ -75,7 +75,7 @@ nav {
   margin-left: 18px;
 }
 
-.container form div label {
+.form-container form div label {
   font-weight: bold;
   font-size: 17px;
 }
@@ -117,6 +117,7 @@ form button {
   border: 1px solid #17202a;
   border-radius: 15px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .list-project {
@@ -193,4 +194,5 @@ form button {
   border: 1px solid #17202a;
   border-radius: 8px;
   width: 48%;
+  cursor: pointer;
 }

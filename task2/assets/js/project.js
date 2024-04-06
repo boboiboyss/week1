@@ -7,25 +7,30 @@ function handleProject(event) {
     let startDate = document.getElementById('lstart-date').value;
     let endDate = document.getElementById('lend-date').value;
     let description = document.getElementById('ldescription').value;
-    let tech = document.getElementsByName('tech');
+    let tech = document.querySelectorAll('input[type="checkbox"]');
+    let check = document.querySelectorAll('input:checked');
     let image = document.getElementById('lupload').files[0];
     let urlImage = URL.createObjectURL(image)
 
-    if(projectName === "" || startDate === "" || endDate === "" || description === "" || urlImage === "" || tech.checked == false) {
+    if(projectName === "" || startDate === "" || endDate === "" || description === "" || urlImage === "") {
         return alert("Please complete the empty fields");
     } else if (startDate > endDate) {
         return alert('The end date cannot be less than the start date');
-    } else {
+    } else if (check.length === 0) {
+         return alert('Please checked one of the box')
+    } 
+    else {
         let listTech = []
         for (let i = 0; i < tech.length; i++) {
-        if (tech[i].checked === true) {
-            listTech.push (tech[i].value);
+           if (tech[i].checked === true) {
+               listTech.push (tech[i].value);
+            }
+        //     else {
+        //         alert('Please checked one of the box');
+        //         return tech;
+        //    } 
+           
         }
-        // else if (tech[i].checked === false) {
-        //     return alert('please check one of the techs')
-        // }
-        }
-
 
         let startDatePart = startDate.split('/');
         let endDatePart = endDate.split('/');
@@ -50,17 +55,14 @@ function handleProject(event) {
             duration = `${getDays} Hari`
         }
 
-        // addProject.push({
-        // projectName, startDate, endDate, description, urlImage, listTech
-        // })
-
         addProject.push({
             title : projectName,
             startDate,
             endDate,
             description,
             image : urlImage,
-            duration
+            duration,
+            listTech
         })
 
         console.log(addProject)
@@ -98,3 +100,4 @@ function handleProject(event) {
 }
 
 
+// console.log('tes');
