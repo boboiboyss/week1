@@ -64,8 +64,6 @@ function handleProject(event) {
             duration,
             listTech
         })
-
-        console.log(addProject)
     }
 
    const temp = document.getElementById('card-project');

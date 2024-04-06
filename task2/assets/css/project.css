@@ -90,8 +90,21 @@ nav {
   box-shadow: 5px 20px 30px #ecf0f1;
 }
 
-.technologies div {
-  margin-right: 40px;
+.technologies {
+  display: flex;
+  height: 90px;
+}
+
+.technologies label {
+  position: absolute;
+}
+
+.technologies .tech {
+  margin-top: 30px;
+}
+
+.technologies div > div {
+  display: inline-block;
 }
 
 .description textarea {
