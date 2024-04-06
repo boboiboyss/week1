@@ -21,16 +21,20 @@ function handleProject(event) {
     } 
     else {
         let listTech = []
-        for (let i = 0; i < tech.length; i++) {
-           if (tech[i].checked === true) {
-               listTech.push (tech[i].value);
-            }
+        // for (let i = 0; i < tech.length; i++) {
+        //    if (tech[i].checked === true) {
+        //        listTech.push (tech[i].value);
+        //     }
         //     else {
         //         alert('Please checked one of the box');
         //         return tech;
         //    } 
            
-        }
+        // }
+
+        check.forEach(item => {
+            listTech.push(item.value);
+        })
 
         let startDatePart = startDate.split('/');
         let endDatePart = endDate.split('/');
