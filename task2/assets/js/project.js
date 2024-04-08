@@ -1,18 +1,18 @@
-const addProject = []
+let addProject = []
 
 function handleProject(event) {
 
     event.preventDefault();
-    let projectName = document.getElementById('lprojectName').value;
+    let projectName = document.getElementById('lproject-name').value;
     let startDate = document.getElementById('lstart-date').value;
     let endDate = document.getElementById('lend-date').value;
     let description = document.getElementById('ldescription').value;
-    let tech = document.querySelectorAll('input[type="checkbox"]');
+    // let tech = document.querySelectorAll('input[type="checkbox"]');
     let check = document.querySelectorAll('input:checked');
     let image = document.getElementById('lupload').files[0];
-    let urlImage = URL.createObjectURL(image)
+    
 
-    if(projectName === "" || startDate === "" || endDate === "" || description === "" || urlImage === "") {
+    if(projectName === "" || startDate === "" || endDate === "" || description === "" || !image) {
         return alert("Please complete the empty fields");
     } else if (startDate > endDate) {
         return alert('The end date cannot be less than the start date');
@@ -29,7 +29,6 @@ function handleProject(event) {
         //         alert('Please checked one of the box');
         //         return tech;
         //    } 
-           
         // }
 
         check.forEach(item => {
@@ -59,6 +58,7 @@ function handleProject(event) {
             duration = `${getDays} Hari`
         }
 
+        let urlImage = URL.createObjectURL(image)
         addProject.push({
             title : projectName,
             startDate,
@@ -74,7 +74,7 @@ function handleProject(event) {
    addProject.map(item => {
         temp.innerHTML += `<div class='card-content'>
                 <img src='${item.image}' alt='img'/>
-                <p class='title-content'>${item.title}</p>  
+                 <a href="./detail-project.html" style="text-decoration : none; margin : 0; color: black;" target="_blank"><p class='title-content'>${item.title}</p></a>  
                 <small>durasi : ${item.duration}</small>
                 <p class='description-content'>${item.description.substr(0, 80)}</p>
                 <i class="fa-brands fa-google-play"></i>
@@ -99,7 +99,7 @@ function handleProject(event) {
 //                 <button>edit</button><button>delete</button>
 //                 </div>
 //     </div>`;
+
 }
 
 
-// console.log('tes');
