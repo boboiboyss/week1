@@ -16,7 +16,7 @@ function handleProject(event) {
         return alert("Please complete the empty fields");
     } else if (startDate > endDate) {
         return alert('The end date cannot be less than the start date');
-    } else if (check.length === 0) {
+    } else if (check.length <= 0) {
          return alert('Please checked one of the box')
     } 
     else {
