@@ -20,6 +20,7 @@ function handleProject(event) {
          return alert('Please checked one of the box')
     } 
     else {
+        let urlImage = URL.createObjectURL(image)
         let listTech = []
         // for (let i = 0; i < tech.length; i++) {
         //    if (tech[i].checked === true) {
@@ -58,7 +59,6 @@ function handleProject(event) {
             duration = `${getDays} Hari`
         }
 
-        let urlImage = URL.createObjectURL(image)
         addProject.push({
             title : projectName,
             startDate,
