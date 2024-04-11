@@ -89,7 +89,7 @@ nav {
 .date input,
 .description textarea {
   width: 100%;
-  padding: 8px 8px;
+  padding: 8px;
   border: 1px solid #ecf0f1;
   border-radius: 5px;
   outline: none;
@@ -99,6 +99,14 @@ nav {
 .technologies {
   display: flex;
   height: 90px;
+}
+
+.technologies input {
+  padding : 10px;
+  border: 1px solid #ecf0f1;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .technologies label {
@@ -124,6 +132,7 @@ nav {
 
 .upload-image input {
   width: 100%;
+  padding: 0 16px 0 0;
   border-radius: 5px;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
   background-color: white;
@@ -184,7 +193,7 @@ form button {
   border: 1px solid #dce0e4;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 10px 10px;
+  padding: 10px
   margin: 5px 5px;
   height: 370px;
 }
