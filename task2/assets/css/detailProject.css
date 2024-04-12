@@ -1,0 +1,28 @@
+body {
+  margin: 50px 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container-detail img {
+  float: left;
+  margin-rigt: 20px;
+}
+
+.container-detail .date {
+  display: flex;
+  /* margin: 0 20px 20px 20px; */
+}
+
+.container-detail .tech {
+  display: flex;
+  flex-direction: row;
+  /* margin: 0 20px 20px 20px; */
+}
+
+#project .desc p {
+  float: left;
+  text-align: justify;
+}
