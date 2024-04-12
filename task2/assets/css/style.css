@@ -7,16 +7,23 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
   background-color: #f7f7f7;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
+  margin-left: 50px;
 }
+
+.nav-right {
+  margin-right: 50px;
+}
+
 .nav-left ul {
   list-style-type: none;
   margin: 0px;
