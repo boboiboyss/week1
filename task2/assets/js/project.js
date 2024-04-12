@@ -1,4 +1,4 @@
-let addProject = []
+var addProject = []
 
 function handleProject(event) {
 
@@ -10,7 +10,7 @@ function handleProject(event) {
     // let tech = document.querySelectorAll('input[type="checkbox"]');
     let check = document.querySelectorAll('input:checked');
     let image = document.getElementById('lupload').files[0];
-    
+
 
     if(projectName === "" || startDate === "" || endDate === "" || description === "" || !image) {
         return alert("Please complete the empty fields");
@@ -21,6 +21,8 @@ function handleProject(event) {
     } 
     else {
         let urlImage = URL.createObjectURL(image)
+        localStorage.setItem('url', JSON.stringify(urlImage));
+      
         let listTech = []
         // for (let i = 0; i < tech.length; i++) {
         //    if (tech[i].checked === true) {
@@ -70,11 +72,13 @@ function handleProject(event) {
         })
     }
 
+    localStorage.setItem('myProject', JSON.stringify(addProject));
+    
    const temp = document.getElementById('card-project');
-   addProject.map(item => {
+   addProject.map((item, key) => {
         temp.innerHTML += `<div class='card-content'>
                 <img src='${item.image}' alt='img'/>
-                 <a href="./detail-project.html" style="text-decoration : none; margin : 0; color: black;" target="_blank"><p class='title-content'>${item.title}</p></a>  
+                 <a href="./detail-project.html?id=${key+1}" style="text-decoration : none; margin : 0; color: black;" target="_blank"><p class='title-content'>${item.title}</p></a>  
                 <small>durasi : ${item.duration}</small>
                 <p class='description-content'>${item.description.substr(0, 80)}</p>
                 <i class="fa-brands fa-google-play"></i>

@@ -102,10 +102,8 @@ nav {
 }
 
 .technologies input {
-  padding : 10px;
-  border: 1px solid #ecf0f1;
-  border-radius: 5px;
-  outline: none;
+  height: 15px;
+  width: 15px;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -193,7 +191,7 @@ form button {
   border: 1px solid #dce0e4;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 10px
+  padding: 10px;
   margin: 5px 5px;
   height: 370px;
 }
