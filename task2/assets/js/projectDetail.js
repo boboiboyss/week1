@@ -30,13 +30,13 @@ let next = '';
 
 for(let i = 0; i < icon.length; i++){
      if(icon[i] === "React") {
-        react += `<div><i class="fa-brands fa-${icon[i].toLowerCase()}"></i> <span>${icon[i].concat(" ", "Js")}</span></div>`
+        react += `<div><i class="fa-brands fa-${icon[i].toLowerCase()}" size="20"></i> <span>${icon[i].concat(" ", "Js")}</span></div>`
      } else if(icon[i] === "Node"){
-        node += `<div><i class="fa-brands fa-${icon[i].toLowerCase()}"></i> <span>${icon[i].concat(" ", "Js")}</span></div>`
+        node += `<div><i class="fa-brands fa-${icon[i].toLowerCase()}" size="20"></i> <span>${icon[i].concat(" ", "Js")}</span></div>`
      } else if (icon[i] === "Next") {
-        next += `<div><img src="./assets/img/${icon[i].toLowerCase()}.png" alt="image-nextjs" style="height: 20px; width: 20px" /> <span>${icon[i].concat(" ", "Js")}</span></div>`
+        next += `<div><img src="./assets/img/${icon[i].toLowerCase()}.png" alt="image-nextjs" style="height: 25px; width: 25px" /> <span>${icon[i].concat(" ", "Js")}</span></div>`
      } else if(icon[i] === "TypeScript") {
-        ts += `<div><img src="./assets/img/${icon[i].toLowerCase()}.png"  alt="image-ts" style="height: 20px; width: 20px"/> <span>${icon[i]}</span></div>`
+        ts += `<div><img src="./assets/img/${icon[i].toLowerCase()}.png"  alt="image-ts" style="height: 25px; width: 25px"/> <span>${icon[i]}</span></div>`
      }
 }
 
