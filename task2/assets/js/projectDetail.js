@@ -1,4 +1,4 @@
-// document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 
 let storeProject = JSON.parse(localStorage.getItem('myProject'))
 const id = location.search.substring(4);
@@ -72,4 +72,4 @@ temp.innerHTML += `<div class="container-detail">
     </div>
     </div>
 `
-// });
+});
