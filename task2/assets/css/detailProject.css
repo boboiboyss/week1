@@ -2,7 +2,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #dce0e4;
 }
 
 nav {
@@ -19,7 +18,6 @@ nav {
   align-items: center;
   margin-left: 50px;
 }
-
 .nav-left ul {
   list-style-type: none;
   margin: 0px;
@@ -30,14 +28,14 @@ nav {
   margin: 0px 20px;
 }
 
-.nav-left ul li a,
-.nav-right a {
-  text-decoration: none;
-  color: black;
-}
-
 .nav-right {
   margin-right: 50px;
+}
+.nav-left ul li a,
+.nav-right a,
+.nav-left a {
+  text-decoration: none;
+  color: black;
 }
 
 .active {
@@ -49,6 +47,56 @@ nav {
   border-radius: 5px;
   color: white;
   background-color: #17202a;
+}
+
+nav .icon-hamburger {
+  display: none;
+}
+
+.action-icon {
+  padding: 20px;
+  background-color: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-icon .btn-contact a {
+  padding: 6px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #17202a;
+  margin: 0px;
+}
+
+.action-icon ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.action-icon ul li {
+  display: block;
+  list-style-type: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.action-icon .testi {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.action-icon ul li a,
+.action-icon .testi a {
+  text-decoration: none;
+  margin: 0px;
+  color: black;
+}
+
+.menu {
+  display: none;
 }
 
 h1 {
@@ -65,8 +113,8 @@ h1 {
 }
 
 .container-detail img {
-  width: 35vw;
-  height: 45vh;
+  width: 40vw;
+  /* height: 50vh; */
   margin-rigt: 20px;
 }
 
@@ -118,9 +166,82 @@ h1 {
   color: #282929;
 }
 
+.container-detail .desc {
+  display: initial;
+}
+
 .container-detail .desc p {
-  float: left;
+  /* float: left; */
   text-align: justify;
   margin-top: 40px;
   color: #282929;
+}
+
+@media only screen and (max-width: 755px) {
+  .container-detail .wrapper {
+    display: block;
+  }
+
+  .container-detail img {
+    width: 80vw;
+    margin-bottom: 20px;
+    /* height: 50vh; */
+    /* margin-rigt: 20px; */
+  }
+
+  .wrapper .right {
+    display: flex;
+  }
+
+  .wrapper .right .date,
+  .wrapper .right .tech {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+
+  .wrapper .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper .right .date {
+    margin-bottom: 20px;
+  }
+
+  nav .icon-hamburger {
+    display: flex;
+    transition: all 1s ease-in-out;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .nav-right {
+    display: none;
+  }
+  .nav-left {
+    margin-left: 20px;
+  }
+
+  .nav-left ul,
+  .nav-left .testi {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px 0;
+    position: relative;
+  }
 }

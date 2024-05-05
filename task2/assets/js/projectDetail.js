@@ -80,7 +80,7 @@ temp.innerHTML += `<div class="container-detail">
             <div class="tech">
                 <p>Technologies</p>
                 <div class="list-tech">
-                ${react} ${node} ${next}${ts}
+                ${react} ${node} ${next} ${ts}
                 </div>
             </div>    
         </div>

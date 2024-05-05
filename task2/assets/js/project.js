@@ -4,8 +4,7 @@ var addProject = []
 //membuat function handleProject dengan parameter event
 function handleProject(event) {
     //menghandle default event reload saat function dijalankan / button di klik
-    event.preventDefault();
-
+   event.preventDefault();
     //mengambil value dari inputan form html
     let projectName = document.getElementById('lproject-name').value;
     let startDate = document.getElementById('lstart-date').value;
@@ -84,7 +83,7 @@ function handleProject(event) {
         }
 
         //menampung semua nilai inputan kedalam addProject
-        addProject.push({
+        addProject.unshift({
             title : projectName,
             startDate,
             endDate,
@@ -93,30 +92,32 @@ function handleProject(event) {
             duration,
             listTech
         })
+        localStorage.setItem('myProject', JSON.stringify(addProject));
     }
 
     //menyimpan semua data addProject kedalam localStorage
-    localStorage.setItem('myProject', JSON.stringify(addProject));
+    
     
     //mengambil element html dengan id card-project
-   const temp = document.getElementById('card-project');
+//     let temp = document.getElementById('card-project');
+//    let myProject = JSON.parse(localStorage.getItem('myProject'))
 
    //menambahkan element html kedalam temp dan menampilkan semua data / item dari addProject
-   addProject.map((item, key) => {
-        temp.innerHTML += `<div class='card-content'>
-                <img src='${item.image}' alt='img'/>
-                 <a href="./detail-project.html?id=${key+1}" style="text-decoration : none; margin : 0; color: black;" target="_blank"><p class='title-content'>${item.title}</p></a>  
-                <small>durasi : ${item.duration}</small>
-                <p class='description-content'>${item.description.substr(0, 80)}</p>
-                <i class="fa-brands fa-google-play"></i>
-                <i class="fa-brands fa-android"></i>
-                <i class="fa-brands fa-java"></i>
-                <div class='action'>
-                <button>edit</button>
-                <button style='margin-left : 3px'>delete</button>
-                </div>
-    </div>`
-   })
+//    addProject.map((item, key) => {
+//         temp.innerHTML += `<div class='card-content'>
+//                 <img src='${item.image}' alt='img'/>
+//                  <a href="./detail-project.html?id=${key+1}" style="text-decoration : none; margin : 0; color: black;"><p class='title-content'>${item.title}</p></a>  
+//                 <small>durasi : ${item.duration}</small>
+//                 <p class='description-content'>${item.description.substr(0, 80)}</p>
+//                 <i class="fa-brands fa-google-play"></i>
+//                 <i class="fa-brands fa-android"></i>
+//                 <i class="fa-brands fa-java"></i>
+//                 <div class='action'>
+//                 <button>edit</button>
+//                 <button style='margin-left : 3px'>delete</button>
+//                 </div>
+//     </div>`
+//    })
 
 //    temp.innerHTML = `<div class='card-content'>
 //                 <img src='${image}' alt='img' />
@@ -130,7 +131,38 @@ function handleProject(event) {
 //                 <button>edit</button><button>delete</button>
 //                 </div>
 //     </div>`;
-
+listProject() //event button click
 }
 
+document.addEventListener('DOMContentLoaded', function(){
+    listProject();
+})
+
+  function listProject(){
+     let listProject =  JSON.parse(localStorage.getItem('myProject'))
+     let html = '';
+     console.log(listProject);
+  if(listProject && listProject.length > 0) {
+    for(let i = 0; i < listProject.length; i++ ) {
+             html += `<div class='card-content'>
+                <img src='${listProject[i].image}' alt='img'/>
+                <a href="./detail-project.html?id=${i+1}" style="text-decoration : none; margin : 0; color: black;">
+                    <p class='title-content'>${listProject[i].title}</p>
+                </a>  
+                <small>durasi : ${listProject[i].duration}</small>
+                <p class='description-content'>${listProject[i].description.substr(0, 120)}</p>
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-android"></i>
+                <i class="fa-brands fa-java"></i>
+                <div class='action'>
+                <button>edit</button>
+                <button style='margin-left : 3px'>delete</button>
+                </div>
+            </div>`
+    } 
+  document.getElementById('card-project').innerHTML = html;
+}else {
+      console.log(`My project doesn't have data yet`);
+  }
+}
 

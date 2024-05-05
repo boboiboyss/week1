@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/1693852aac.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/toggle.js"></script>
     <title>Personal Web</title>
   </head>
   <body>
@@ -17,18 +18,37 @@
           <img src="./assets/img/logo.png" alt="logo" />
         </a>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">Home</a></li>
           <li><a href="./project.html">My Project</a></li>
         </ul>
+        <a href="./testimonials.html" class="testi"> Testimonials </a>
       </div>
       <div class="nav-right">
         <a href="./contact-form.html">Contact Me</a>
       </div>
+      <div class="icon-hamburger" onclick="toggleElement()">
+        <i class="fa-solid fa-bars fa-2x"></i>
+      </div>
     </nav>
+    <div class="menu show" id="toggle">
+      <div class="action-icon">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="./project.html">My Project</a></li>
+        </ul>
+        <div class="testi">
+          <a href="./testimonials.html"> Testimonials </a>
+        </div>
+        <!-- </div> -->
+        <div class="btn-contact">
+          <a href="./contact-form.html">Contact Me</a>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="card">
         <div class="content-card">
-          <h2 style="font-weight: bold">Hi Welcome to my hut</h2>
+          <h2 style="font-weight: bold">Hii! Welcome to my profile</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
             expedita doloremque vel cupiditate! Ipsa, libero aspernatur!
@@ -65,7 +85,7 @@
           <img src="./assets/img/foto.jpg" alt="foto" />
           <div class="me">
             <p style="font-weight: 900">Yan Dwi Boy Simbolon</p>
-            <span>Fullstack Developer</span>
+            <p>Fullstack Developer</p>
           </div>
         </div>
       </div>

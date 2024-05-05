@@ -1,13 +1,12 @@
 body {
-  background-color: #dce0e4;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
-  width: 100%;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: #f7f7f7;
@@ -19,11 +18,6 @@ nav {
   align-items: center;
   margin-left: 50px;
 }
-
-.nav-right {
-  margin-right: 50px;
-}
-
 .nav-left ul {
   list-style-type: none;
   margin: 0px;
@@ -34,6 +28,9 @@ nav {
   margin: 0px 20px;
 }
 
+.nav-right {
+  margin-right: 50px;
+}
 .nav-left ul li a,
 .nav-right a,
 .nav-left a {
@@ -102,67 +99,90 @@ nav .icon-hamburger {
   display: none;
 }
 
-.form-container {
-  background-color: #dce0e4;
-  padding: 40px 0;
-}
-
-.form-container p {
-  display: block;
+h1 {
   text-align: center;
-  font-weight: 800;
-  font-size: 25px;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
-form {
-  width: 350px;
-  margin: 25px auto 50px auto;
+.card-container {
+  width: 90vw;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-input,
-textarea {
+.card-testi .card {
+  width: 250px;
+  border: 1px solid #f7f7f7;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-testi {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 13px;
+  justify-content: center;
+}
+
+.card-testi .card .img-testi {
   width: 100%;
-  margin-bottom: 10px;
-  border: 1px solid #dbdbdb;
-  background-color: #f7f7f7;
-  border-radius: 4px;
-  padding: 10px;
-  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
+  height: 150px;
 }
 
-select {
-  width: 106%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #dbdbdb;
-  background-color: #f7f7f7;
-  border-radius: 4px;
-  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
+.card .quote {
+  font-style: italic;
+  height: 40px;
 }
 
-label {
-  font-weight: "bold";
-  font-size: 18px;
+.card .author {
+  text-align: right;
+  font-weight: bold;
 }
 
-textarea {
-  resize: none;
-  height: 100px;
-  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.1);
+.rating-container {
+  display: flex;
+  flex-direction: column;
+}
+.rating-container h2 {
+  text-align: center;
 }
 
-form div button {
-  background-color: #17202a;
-  border-style: none;
-  border-radius: 15px;
-  padding: 10px 30px;
+.rating-container .rating-testi {
+  margin: 10px auto;
+}
+
+.rating-testi .btn-testi {
+  padding: 5px 15px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.85);
   color: white;
-  font-weight: "bold";
   cursor: pointer;
-  float: right;
-  margin: 10px 0;
 }
+
+/* @media only screen and (max-width: 970px) {
+  .card-container {
+    width: 80vw;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-testi .card {
+    width: 20vw;
+    border: 1px solid #f7f7f7;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+} */
 
 @media only screen and (max-width: 600px) {
   .menu {
